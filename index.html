@@ -8,6 +8,17 @@
     <a-scene>
       <a-box scale="2 2 2" color="green" position="0 0 -4" rotation="0 45 0"></a-box>
       <a-circle scale="1 0 0" color="blue" position="0 0 -2" rotation="0 20 0"></a-circle>
+      
+      <a-assets>
+        <img id="ground" src="ground.jpg">
+       </a-assets>
+
+      <!-- Basic plane. -->
+      <a-plane color="#CCC" height="20" width="20"></a-plane>
+
+      <!-- Textured plane parallel to ground. -->
+       <a-plane src="#ground" height="100" width="100" rotation="-90 0 0"></a-plane>
+      
       <!-- Out of the box environment! -->
       <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
     </a-scene>
